@@ -11,7 +11,7 @@ export const CountryPage = () => {
   return (
     <main className="main">
     <div className="up">
-        <Link className="btn" to="/">Back</Link>
+        <Link className="btn" to="/frontend-mentor/rest-countries/">Back</Link>
     </div>
     {
         country && <CountryDetails {...country}/>

@@ -38,7 +38,7 @@ export const CountryDetails = ({
                 <div className="border-countries">
                     <p>Border Countries: </p>
                     {borders.map(bc => (
-                        <Link to={`/country/${bc.id}`} >{bc.name}</Link>
+                        <Link to={`/frontend-mentor/rest-countries/country/${bc.id}`} >{bc.name}</Link>
                     ))}
                 </div>
             }

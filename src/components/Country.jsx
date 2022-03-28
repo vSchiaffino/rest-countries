@@ -5,7 +5,7 @@ import { formatNumber } from './helpers/formatNumber'
 
 export const Country = ({ src, name, population, region, capital, id}) => {
     return (
-    <Link className="country" to={`country/${id}`} >
+    <Link className="country" to={`/frontend-mentor/rest-countries/country/${id}`} >
         <img src={src} alt={`${name} flag`} />
         <div className="data">
             <h2>{name}</h2>
