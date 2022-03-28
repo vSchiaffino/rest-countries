@@ -1,0 +1,142 @@
+.index {
+    padding: 50px 75px 0;
+}
+
+.filters{
+    width: 100%;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.input::placeholder{
+    color: var(--text);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+
+.input {
+    padding: 20px;
+    padding-right: 50px;
+    background-color: var(--elements);
+    border: none;
+    color: var(--text);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.search{
+    background: transparent var(--search-url) no-repeat 20px center;
+    background-color: var(--elements);
+    padding-left: 60px;
+    width: 400px;
+}
+
+.input:focus, .input:focus-visible{
+    outline: none;
+    border: none;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown option {
+    border: none;
+}
+
+.countries {
+    --row-items: 4;
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--row-items), 1fr);
+    column-gap: 75px;
+    row-gap: 75px;
+}
+
+.country {
+    box-sizing: content-box;
+    display: inline-block;
+    background-color: var(--elements);
+    box-shadow: var(--shadow);
+    color: inherit;
+    text-decoration: none;
+}
+
+.country .data {
+    padding: 25px;
+    padding-bottom: 50px;
+}
+
+.data h2 {
+    margin-bottom: 25px;
+}
+
+.data span {
+    font-weight: 800;
+}
+
+.data p{
+    font-weight: 300;
+}
+
+.country img {
+    display: block;
+    width: 100%;
+}
+
+.country, .country img {
+    border-radius: 5px;
+}
+
+
+/* LG 1440 - + */
+@media screen and (max-width: 1441px) {
+    .countries {
+        --row-items: 4;
+    }
+}
+
+/* MD 991-1399 */
+@media screen and (max-width: 1200px) {
+    .countries {
+        --row-items: 3;
+    }
+}
+
+/* SM   767 - 990 */
+@media screen and (max-width: 990px) {
+    .countries {
+        --row-items: 2;
+    }
+}
+
+/* SM   - - 766 */
+@media screen and (max-width: 766px) {
+    .countries {
+        margin-top: 120px;
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filters > * {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .index {
+        box-sizing: content-box;
+        padding: 3em 2em;
+    }
+
+    .countries {
+        --row-items: 1;
+    }
+
+}

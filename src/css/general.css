@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root[data-theme="dark"]{
+    --dark-blue: hsl(209, 23%, 22%);
+    --very-dark-blue: hsl(207, 26%, 17%);
+    --white: hsl(0, 0%, 100%);
+
+    --moon-url: url(../../public/img/moon-regular-dark.svg);
+    --moon-hover-url: url(../../public/img/moon-solid-dark.svg);
+    --text: var(--white);
+    --elements: var(--dark-blue);
+    --background: var(--very-dark-blue);
+    --search-url: url(../../public/img/search-dark.svg);
+}
+
+:root[data-theme="light"]{
+    --very-dark-blue: hsl(200, 15%, 8%);
+    --dark-gray: hsl(0, 0%, 52%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+
+    --moon-url: url(../../public/img/moon-regular-light.svg);
+    --moon-hover-url: url(../../public/img/moon-solid-light.svg);
+    --text: var(--very-dark-blue);
+    --elements: var(--white);
+    --background: var(--very-light-gray);
+    --input: var(--dark-gray);
+    --search-url: url(../../public/img/search-light.svg);
+}
+
+body, html {
+    letter-spacing: .7px;
+    font-weight: 600;
+    --shadow: rgba(12, 12, 12, 0.1) 0px 1px 8px 0px;
+    background-color: var(--background);
+    width: 100%;
+    height: 100%;
+    color: var(--text);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+}
+
+*, *::after, *::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.fa-moon{
+    transition: .5s;
+    content: var(--moon-url);
+    width: 20px;
+    margin-right: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 75px;
+    align-items: center;
+    background-color: var(--elements);
+    --pading: 75px;
+    padding-left: var(--pading);
+    padding-right: var(--pading);
+    box-shadow: var(--shadow);
+
+}
+
+.header h1 {
+    font-weight: 800;
+    font-size: 23px;
+}
+
+.header p {
+    margin-left: auto;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    cursor: pointer;
+}
+
+p:hover .fa-moon {
+    content: var(--moon-hover-url);
+}
+
+
+
+/* SM   - - 766 */
+@media screen and (max-width: 766px) {
+    .header {
+        --pading: 2em;
+    }
+
+    .header h1{
+        font-size: 20px;
+    }
+    
+    .header p{
+        font-size: 13px;
+        align-items: center;
+    }    
+}
