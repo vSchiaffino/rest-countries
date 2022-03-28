@@ -14,9 +14,9 @@ function App () {
     <Router>
         <Header />
         <Routes>
-          <Route path="/" exact element={<IndexPage />} />
-          <Route path="/country" exact element={<CountryPage/>} />
-          <Route path="/country/:id" exact element={<CountryPage/>} />
+          <Route path="/frontend-mentor/rest-countries/" element={<IndexPage />} />
+          <Route path="/frontend-mentor/rest-countries/country" element={<CountryPage/>} />
+          <Route path="/frontend-mentor/rest-countries/country/:id" element={<CountryPage/>} />
         </Routes>
       </Router>
   )
