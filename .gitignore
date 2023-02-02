@@ -17,3 +17,4 @@
 # my ignores
 **/.vscode/
 **/node_modules/
+build/
